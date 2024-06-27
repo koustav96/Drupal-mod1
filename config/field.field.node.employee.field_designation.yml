@@ -1,0 +1,29 @@
+uuid: c5950c37-5b06-43d1-8b1a-1ca8685938ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_designation
+    - node.type.employee
+    - taxonomy.vocabulary.software_trainee
+id: node.employee.field_designation
+field_name: field_designation
+entity_type: node
+bundle: employee
+label: Designation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      software_trainee: software_trainee
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

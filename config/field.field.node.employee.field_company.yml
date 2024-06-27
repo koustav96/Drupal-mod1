@@ -1,0 +1,19 @@
+uuid: 196daaf8-3f50-4409-950e-3b33618b753b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company
+    - node.type.employee
+id: node.employee.field_company
+field_name: field_company
+entity_type: node
+bundle: employee
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: ab060e01-f25e-46ff-9a04-b489c76a2416
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.add-an-employee
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_custommenu
+theme: olivero
+region: hero
+weight: 0
+provider: null
+plugin: 'system_menu_block:add-an-employee'
+settings:
+  id: 'system_menu_block:add-an-employee'
+  label: 'Custom Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

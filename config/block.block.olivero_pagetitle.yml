@@ -1,0 +1,24 @@
+uuid: 79bc32a6-027d-4180-8956-ed7b6df60620
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_pagetitle
+theme: olivero
+region: content_above
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/blogs\r\n/employees"

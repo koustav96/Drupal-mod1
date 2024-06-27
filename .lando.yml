@@ -1,0 +1,21 @@
+name: employee-portal
+recipe: drupal10
+config: 
+  webroot: .
+  via: nginx
+  php: 8.2
+  drush: true
+#   xdebug: true 
+# proxy:
+#   mailhog:
+#     - mailhog.lndo.site
+# services:
+#   pma:
+#     type: phpmyadmin
+#     hosts:
+#       - database
+#   mailhog:
+#     type: mailhog
+#     hogfrom:
+#       - appserver
+#     portforward: true 
