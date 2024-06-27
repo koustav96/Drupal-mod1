@@ -1,0 +1,195 @@
+uuid: 119dbbd1-aa53-4560-8135-f569b36ad26d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.body
+    - field.field.node.employee.field_age
+    - field.field.node.employee.field_blogs
+    - field.field.node.employee.field_company
+    - field.field.node.employee.field_designation
+    - field.field.node.employee.field_goals
+    - field.field.node.employee.field_image
+    - field.field.node.employee.field_key_characteristics
+    - field.field.node.employee.field_project
+    - field.field.node.employee.field_salary
+    - field.field.node.employee.field_skills
+    - image.style.custom_image_thumbnil
+    - node.type.employee
+  module:
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - group_personal_details
+        - node_title
+        - field_designation
+      right:
+        - field_image
+        - group_background
+        - field_age
+        - field_company
+        - field_salary
+      footer:
+        - field_goals
+        - field_key_characteristics
+        - field_blogs
+        - field_project
+        - field_skills
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 13
+        label: hidden
+        formatter: default
+  field_group:
+    group_background:
+      children:
+        - field_age
+        - field_company
+        - field_salary
+      label: Background
+      parent_name: ''
+      region: right
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+    group_personal_details:
+      children:
+        - node_title
+        - field_designation
+      label: 'Personal Details'
+      parent_name: ''
+      region: left
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_age:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: right
+  field_blogs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: footer
+  field_company:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: right
+  field_designation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: left
+  field_goals:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: footer
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: custom_image_thumbnil
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: right
+  field_key_characteristics:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: footer
+  field_project:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: footer
+  field_salary:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: right
+  field_skills:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: footer
+hidden:
+  body: true
+  links: true

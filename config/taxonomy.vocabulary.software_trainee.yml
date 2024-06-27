@@ -1,0 +1,9 @@
+uuid: b9e6076b-f2d7-4e4b-ad2f-5f3db9a0a386
+langcode: en
+status: true
+dependencies: {  }
+name: Designation
+vid: software_trainee
+description: null
+weight: 0
+new_revision: false
